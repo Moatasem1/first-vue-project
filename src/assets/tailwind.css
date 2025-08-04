@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+body {
+  @apply bg-black text-white;
+}
+
+.container {
+  @apply container mx-auto;
+}
