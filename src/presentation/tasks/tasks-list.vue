@@ -1,5 +1,5 @@
 <template>
-  <section class="py-4 min-h-dvh flex flex-col">
+  <section class="p-section min-h-dvh flex flex-col">
     <div class="container grow flex flex-col">
       <h1 class="text-3xl font-semibold mb-8">Tasks List</h1>
       <div class="mb-8 flex gap-3">
@@ -58,8 +58,8 @@ export interface ITask {
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import type { ICreateTask } from './add-task.vue'
-import addTask from './add-task.vue'
+import type { ICreateTask } from '@/presentation/tasks/add-task.vue'
+import addTask from '@/presentation/tasks/add-task.vue'
 import task from './task.vue'
 
 const tasks = ref<ITask[]>([

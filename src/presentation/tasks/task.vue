@@ -32,7 +32,7 @@
         v-if="isInUpdateMode"
         class="text-xs capitalize rounded-full! px-1! py-1!"
       >
-        <option v-for="state in statusInfo" :value="state[0]">
+        <option v-for="state in statusInfo" :key="state[0]" :value="state[0]">
           {{ state[1].displayText }}
         </option>
       </select>
@@ -67,7 +67,7 @@
 <script setup lang="ts">
 import { defineProps, ref } from 'vue'
 import { Trash2, SquarePen, X, Check } from 'lucide-vue-next'
-import { type ITask, TaskStatus, type TaskStatusUIInfo } from './tasks.vue'
+import { type ITask, TaskStatus, type TaskStatusUIInfo } from './tasks-list.vue'
 
 const props = defineProps<{ task: ITask }>()
 const oldTask = ref({ ...props.task })
